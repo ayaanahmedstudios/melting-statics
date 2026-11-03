@@ -24,7 +24,7 @@ body { display: flex; flex-direction: column; }
   50% { font-variation-settings: "wght" 800, "wdth" 100; }
 }
 
-header { padding: 40px 0 16px; text-align: center; }
+header { padding: 40px 0 16px; text-align: center; contain: layout paint; }
 .logo {
   display: inline-block;
   padding: 7px 16px;
@@ -40,7 +40,6 @@ header { padding: 40px 0 16px; text-align: center; }
   display: inline-block;
   white-space: pre;
   font-variation-settings: "wght" 250, "wdth" 78;
-  will-change: font-variation-settings;
   animation: wave 3.6s ease-in-out infinite;
   animation-delay: calc(var(--i) * 105ms - 3.6s);
 }
@@ -90,6 +89,7 @@ h1 em {
 .drop input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
 .hid { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
 
+.note { color: var(--muted); }
 #msg, #wmsg { margin: 18px 0 0; min-height: 22px; text-align: center; font: 600 14px/1.4 var(--sans); }
 #wmsg { margin: 0 0 12px; min-height: 0; text-align: left; }
 #msg.err, #wmsg.err { color: var(--red); }
